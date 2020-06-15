@@ -10,9 +10,9 @@ import SwiftUI
 
 // viewModel
 
-class EmojiMemoryGame {
+class EmojiMemoryGame: ObservableObject {
 
-    private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
+    @Published private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
 
     // type function
     static func createMemoryGame() -> MemoryGame<String> {
@@ -31,6 +31,7 @@ class EmojiMemoryGame {
     // MARK: - Intent(s)
 
     func choose(card: MemoryGame<String>.Card) {
+        objectWillChange.send()
         model.choose(card: card)
     }
 }

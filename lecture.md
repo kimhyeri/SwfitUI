@@ -32,3 +32,20 @@
 ### Layout
 - HStack and VStack
 - GeometryReader
+
+## Lecture4 
+### enum
+- Another variety of data structure in addition to struct and class
+    - Associated Data : Each state can have its own associated data
+    - Setting the value of an enum
+### Optionals
+- Declaring somthing of type Optional<T> can be done with the syntax T? You can then assign it the value nil (Optional.none) Or you can assign it something of the type T (Optional.some with associated value that value).
+- Optional always start out with an implicit = nil
+
+```
+enum Optional<T> {
+    case none
+    case some(<T>)
+}
+```
+

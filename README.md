@@ -1,3 +1,3 @@
-# SwfitUI
+# SwiftUI
 
 ## lecture (stanford)
